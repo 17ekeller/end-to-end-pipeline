@@ -39,7 +39,7 @@ Since there are multiple steps depending on one another, I chose to use Apache A
   -  Apache Airflow - workflow scheduling, batch processing, orchestration and S3 Abstraction
   -  Microsoft PowerBI - visualization
 
-## Pipeline Data Flow
-(/Pipeline Flowchart.png)
+## Pipeline Architecture Visual
+![Data pipeline flowchar](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Pipeline%20Flowchart)
 
 
