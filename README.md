@@ -18,7 +18,7 @@ The data is sourced from WeatherAPI.com's [Current Weather API](https://www.weat
 ### Business Logic
 The data pipeline for this project follows a systematic flow to ensure the accuracy, cleanliness, and accessibility of the Chicago weather data. Here's a breakdown of the business logic:
 
-- ***Data Extraction:*** Weather data is sourced in real-time from WeatherAPI.com's Current Weather API. The data includes a variety of parameters related to Chicago's weather conditions.
+- ***Data Extraction:*** Weather data is sourced in real-time from WeatherAPI.com's Current Weather API. The data includes a variety of parameters related to Chicago's current weather conditions.
 - ***Data Lake Storage:*** The raw weather data is stored in an Amazon S3 bucket. Storing the data in its raw format allows for easy access and scalability, provides transparency and ease of access to original data sets.
 - ***Data Transformation and Cleaning:*** The raw data contains 33 data points, but only 14 are useful for analysis. Therefore, a transformation process is initiated to filter out the irrelevant data points and clean the dataset. Additionally, the double nested JSON format of the data is flattened to ensure compatibility with downstream processes.
 - ***Processed Data Storage:*** The cleaned and transformed data is then stored in another Amazon S3 bucket named "Processed Data." This serves as a repository for the refined data, making it readily available for further analysis.
