@@ -1,14 +1,14 @@
 # Chicago Weather - Automated End to End Data Pipeline Project
 
 ## Introduction
-This project aims to create a fully automated, end to end data pipeline using realtime, on the half-hour weather data from the City of Chicago. 
+This project aims to create a fully automated, end to end data pipeline using realtime, on the half-hour weather data from the City of Chicago via [Current Weather API](https://www.weatherapi.com/docs/). 
 
-The data pipeline extracts, transforms and loads Chicago weather data into a datawarehouse at thirty minute time intervals and further produces visualization dashboards for analysis with a Busines Intelligence (BI) tool that is auto refreshed.
+Using modern tech stack tools, the data pipeline orchestrates the extraction, transformation, and loading of Chicago weather data into a data warehouse every thirty minutes. Additionally, it seamlessly generates auto-refreshed visualization dashboards using a direct connection to PowerBI for insightful analysis.
 
-**Personal goals achieved on this project:**
+***Personal goals achieved on this project:***
  1. Upskilling Apache Spark and Airflow
  2. Utilzing AWS and S3 Abstraction
- 3. Fully automating an end to end pipeline
+ 3. Fully automating an end-to-end data pipeline including visual dashboards
 
 ## Architecture
 
@@ -16,9 +16,16 @@ The data pipeline extracts, transforms and loads Chicago weather data into a dat
 The data is sourced from WeatherAPI.com's [Current Weather API](https://www.weatherapi.com/docs/). WeatherAPI.com is free and open source, all that is required is an API Key
 
 ### Business Logic
-The data flow logic for this porject is: extract the weather data, load it to a data lake, clean and transform it and load it back into a processed data lake and then to a data warehouse. From there, utilizing a BI tool, the data is used for creating visulizations and dashboards for further analysis.
+The data pipeline for this project follows a systematic flow to ensure the accuracy, cleanliness, and accessibility of the Chicago weather data. Here's a breakdown of the business logic:
 
-The raw data contains 33 datapoints about the weather, however only 14 were useful and therefore 19 points are dropped. Also, the data is retrieved in JSON format. The JSON file contains a double-nested object that needs to be flattened in order to properly write to the data warehouse.
+- ***Data Extraction:*** Weather data is sourced in real-time from WeatherAPI.com's Current Weather API. The data includes a variety of parameters related to Chicago's weather conditions.
+- ***Data Lake Storage:*** The raw weather data is stored in an Amazon S3 bucket. Storing the data in its raw format allows for easy access and scalability, provides transparency and ease of access to original data sets.
+- ***Data Transformation and Cleaning:*** The raw data contains 33 data points, but only 14 are useful for analysis. Therefore, a transformation process is initiated to filter out the irrelevant data points and clean the dataset. Additionally, the double nested JSON format of the data is flattened to ensure compatibility with downstream processes.
+- ***Processed Data Storage:*** The cleaned and transformed data is then stored in another Amazon S3 bucket named "Processed Data." This serves as a repository for the refined data, making it readily available for further analysis.
+- ***Data Warehousing:*** The processed data is loaded into a MySQL database, serving as the data warehouse. This structured storage allows for efficient querying and retrieval of historical weather data.
+- ***Visualization and Analysis:*** Utilizing a Business Intelligence (BI) tool, in this case, Microsoft PowerBI, visualization dashboards are created utilizing a direct link to the MySQL database. These dashboards are auto refreshed and provide insights into Chicago's weather trends, patterns, and anomalies, aiding stakeholders in making informed decisions.
+
+The data pipeline boasts complete automation from start to finish, eliminating manual intervention and streamlining the entire process. This automation enhances efficiency by executing tasks at scheduled intervals without human intervention, ensuring consistent and reliable data processing.
 
 ### Data Destination
 The data has four destinations along its journey through this pipeline. 
@@ -30,6 +37,8 @@ The data has four destinations along its journey through this pipeline.
 
 ### Orchestration
 Since there are multiple steps depending on one another, I chose to use Apache Airflow for this project, creating a Dag that runs at a time interval of 30 minutes.
+
+Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow.providers.amazon.aws.hooks module in Python.
 
 ## Tech Stack
   - Python
