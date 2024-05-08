@@ -36,7 +36,7 @@ The data has four destinations along its journey through this pipeline.
   4. PowerBI Report Model
 
 ### Orchestration
-Since there are multiple steps depending on one another, I chose to use Apache Airflow for this project, creating a Dag that runs at a time interval of 30 minutes.
+Since there are multiple steps depending on one another, I chose to use Apache Airflow for this project, creating a DAG that runs at a time interval of 30 minutes.
 
 Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow.providers.amazon.aws.hooks module in Python.
 
@@ -51,4 +51,6 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
 ## Pipeline Architecture Visual
 ![Data pipeline flowchar](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Pipeline%20Flowchart)
 
+## DAG Flow Visual
+![Dag Flow](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Dagflow)
 
