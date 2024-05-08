@@ -7,7 +7,7 @@ The data pipeline extracts, transforms and loads Chicago weather data into a dat
 
 **Personal goals achieved on this project:**
  1. Upskilling Apache Spark and Airflow
- 2. Utilzing AWS
+ 2. Utilzing AWS and S3 Abstraction
  3. Fully automating an end to end pipeline
 
 ## Architecture
@@ -32,11 +32,11 @@ The data has four destinations along its journey through this pipeline.
 Since there are multiple steps depending on one another, I chose to use Apache Airflow for this project, creating a Dag that runs at a time interval of 30 minutes.
 
 ## Tech Stack
-  1. Python
-  2. Amazon S3 - data lake storage
-  3. MySQL - data warehousing
-  4. Apache Spark - cleaning, transforming and writing data
-  5. Apache Airflow - workflow scheduling, batch processing and orchestration
+  - Python
+  -  Amazon S3 - data lake storag
+  -  MySQL - data warehousing
+  -  Apache Spark - cleaning, transforming and writing data
+  -  Apache Airflow - workflow scheduling, batch processing, orchestration and S3 Abstraction
   6. Microsoft PowerBI - visualization
 
 ## Pipeline Data Flow
