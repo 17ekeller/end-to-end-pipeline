@@ -37,9 +37,9 @@ Since there are multiple steps depending on one another, I chose to use Apache A
   -  MySQL - data warehousing
   -  Apache Spark - cleaning, transforming and writing data
   -  Apache Airflow - workflow scheduling, batch processing, orchestration and S3 Abstraction
-  6. Microsoft PowerBI - visualization
+  -  Microsoft PowerBI - visualization
 
 ## Pipeline Data Flow
-
+(/Pipeline Flowchart.png)
 
 
