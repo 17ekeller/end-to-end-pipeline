@@ -1,4 +1,4 @@
-# Chicago Weather - Automated End to End Data Pipeline Project
+# :partly_sunny: Chicago Weather - Automated End to End Data Pipeline Project :cloud_with_lightning:
 
 ## Introduction
 This project aims to create a fully automated, end to end data pipeline using realtime, on the half-hour weather data from the City of Chicago via [Current Weather API](https://www.weatherapi.com/docs/). 
@@ -20,7 +20,7 @@ The data pipeline for this project follows a systematic flow to ensure the accur
 
 - ***Data Extraction:*** Weather data is sourced in real-time from WeatherAPI.com's Current Weather API. The data includes a variety of parameters related to Chicago's current weather conditions.
 - ***Data Lake Storage:*** The raw weather data is stored in an Amazon S3 bucket. Storing the data in its raw format allows for easy access and scalability, provides transparency and ease of access to original data sets.
-- ***Data Transformation and Cleaning:*** The raw data contains 33 data points, but only 14 are useful for analysis. Therefore, a transformation process is initiated to filter out the irrelevant data points and clean the dataset. Additionally, the double nested JSON format of the data is flattened to ensure compatibility with downstream processes.
+- ***Data Transformation and Cleaning:*** The raw data contains 33 data points, but only 14 are useful for analysis. Therefore, a transformation process is initiated to filter out the irrelevant data points and clean the dataset. Additionally, the double nested JSON format of the data is flattened to ensure compatibility with downstream processes. Also defined is the data schema, used for loading the proper datatypes into a pySpark dataframe.
 - ***Processed Data Storage:*** The cleaned and transformed data is then stored in another Amazon S3 bucket named "Processed Data." This serves as a repository for the refined data, making it readily available for further analysis.
 - ***Data Warehousing:*** The processed data is loaded into a MySQL database, serving as the data warehouse. This structured storage allows for efficient querying and retrieval of historical weather data.
 - ***Visualization and Analysis:*** Utilizing a Business Intelligence (BI) tool, in this case, Microsoft PowerBI, visualization dashboards are created utilizing a direct link to the MySQL database. These dashboards are auto refreshed and provide insights into Chicago's weather trends, patterns, and anomalies, aiding stakeholders in making informed decisions.
