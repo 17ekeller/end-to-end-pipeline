@@ -49,7 +49,7 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
   -  Microsoft PowerBI - visualization
 
 ## Pipeline Architecture Visual
-![Data pipeline flowchar](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Pipeline%20Flowchart)
+![Data pipeline flowchar](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/Data%20Flow%20Visual)
 
 ## DAG Flow Visual
 ![Dag Flow](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Dagflow)
