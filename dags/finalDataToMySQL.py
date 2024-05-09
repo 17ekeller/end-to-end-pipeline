@@ -2,8 +2,7 @@ from pyspark.sql import SparkSession
 from transformProcessedData import main
 from config import username, passkey
 
-'''This script takes the processed data file from S3 and utilizing apache Spark,
-puts the processed data into a dataframe, connects to a MySQL database and appends the newly extracted and transformed 
+'''This script utilizes Apache Spark and the JDBC driver to connect to a MySQL database and appends the newly extracted and transformed 
 data into the database for further querying and visualizations'''
 
 def toMySQL() -> None:
