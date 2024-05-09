@@ -9,7 +9,7 @@ Using modern tech stack tools, the data pipeline orchestrates the extraction, tr
 
 ***Personal goals achieved on this project:***
  1. Upskilling Apache Spark and Airflow
- 2. Utilzing AWS and S3 Abstraction
+ 2. Utilizing AWS and S3 Abstraction
  3. Fully automating an end-to-end data pipeline including visual dashboards
 
 ## :triangular_ruler:  Architecture
