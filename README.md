@@ -44,7 +44,7 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
 
 ## :books:Tech Stack
   -  Python
-  -  Amazon S3 - data lake storage
+  -  Amazon Web Service S3 - data lake storage
   -  MySQL - data warehousing
   -  Apache Spark - cleaning, transforming and writing data
   -  Apache Airflow - workflow scheduling, batch processing, orchestration and S3 Abstraction
