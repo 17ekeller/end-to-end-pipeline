@@ -23,7 +23,7 @@ The data pipeline for this project follows a systematic flow to ensure the accur
 - ***Data Transformation and Cleaning:*** The raw data contains 33 data points, but only 14 are useful for analysis. Therefore, a transformation process is initiated to filter out the irrelevant data points and clean the dataset. Additionally, the double nested JSON format of the data is flattened to ensure compatibility with downstream processes. Also defined is the data schema, used for loading the proper datatypes into a pySpark dataframe.
 - ***Processed Data Storage:*** The cleaned and transformed data is then stored in another Amazon S3 bucket named "Processed Data." This serves as a repository for the refined data, making it readily available for further analysis.
 - ***Data Warehousing:*** The processed data is loaded into a MySQL database, serving as the data warehouse. This structured storage allows for efficient querying and retrieval of historical weather data.
-- ***Visualization and Analysis:*** Utilizing a Business Intelligence (BI) tool, in this case, Microsoft PowerBI, visualization dashboards are created utilizing a direct link to the MySQL database. These dashboards are auto refreshed and provide insights into Chicago's weather trends, patterns, and anomalies, aiding stakeholders in making informed decisions.
+- ***Visualization and Analysis:*** Utilizing a Business Intelligence (BI) tool, in this case, Microsoft PowerBI, visualization dashboards are created utilizing a direct link to the MySQL database and Power Query. These dashboards are auto refreshed and provide insights into Chicago's weather trends, patterns, and anomalies, aiding stakeholders in making informed decisions.
 
 The data pipeline boasts complete automation from start to finish, eliminating manual intervention and streamlining the entire process. This automation enhances efficiency by executing tasks at scheduled intervals without human intervention, ensuring consistent and reliable data processing.
 
@@ -53,4 +53,7 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
 
 ## DAG Flow Visual
 ![Dag Flow](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Dagflow)
+
+## Power BI Dashboard
+![PBI Dashboard](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/PBI%20Dashboard)
 
