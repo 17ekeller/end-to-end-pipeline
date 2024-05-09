@@ -1,7 +1,7 @@
 from airflow.providers.amazon.aws.hooks.s3 import S3Hook
 import json
 
-'''This script fetches the raw data, and transforms it by dropping uneeded data points and flattens the nested JSON data in the raw file. 
+'''This script fetches the raw data, and transforms it by dropping unneeded data points and flattens the nested JSON data in the raw file. 
 This prepares the data to be put into a Spark dataframe for push to MySql Database'''
 
 def flattenData(d, parent_key='', sep='_') -> list:
