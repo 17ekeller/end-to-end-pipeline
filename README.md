@@ -1,6 +1,6 @@
 # :partly_sunny: Chicago Weather - Automated End to End Data Pipeline Project :cloud_with_lightning:
 
-## Introduction
+## :white_check_mark:Introduction
 This project aims to create a fully automated, end to end data pipeline using realtime, on the half-hour weather data from the City of Chicago via [Current Weather API](https://www.weatherapi.com/docs/). 
 
 Using modern tech stack tools, the data pipeline orchestrates the extraction, transformation, and loading of Chicago weather data into a data warehouse every thirty minutes. Additionally, it seamlessly generates auto-refreshed visualization dashboards using a direct connection to PowerBI for insightful analysis.
@@ -10,7 +10,7 @@ Using modern tech stack tools, the data pipeline orchestrates the extraction, tr
  2. Utilzing AWS and S3 Abstraction
  3. Fully automating an end-to-end data pipeline including visual dashboards
 
-## Architecture
+## :triangular_ruler:  Architecture
 
 ### Data Source
 The data is sourced from WeatherAPI.com's [Current Weather API](https://www.weatherapi.com/docs/). WeatherAPI.com is free and open source, all that is required is an API Key
@@ -40,7 +40,7 @@ Since there are multiple steps depending on one another, I chose to use Apache A
 
 Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow.providers.amazon.aws.hooks module in Python.
 
-## Tech Stack
+## :books:Tech Stack
   -  Python
   -  Amazon S3 - data lake storage
   -  MySQL - data warehousing
@@ -51,9 +51,20 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
 ## Pipeline Architecture Visual
 ![Data pipeline flowchar](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/Data%20Flow%20Visual)
 
-## DAG Flow Visual
+## DAG Graph Visual
 ![Dag Flow](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Dagflow)
 
 ## Power BI Dashboard
 ![PBI Dashboard](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/PBI%20Dashboard)
+
+## Contact
+:handshake: Connect with me [LinkedIn](https://www.linkedin.com/in/eric-keller-binf-b7303418b/)
+
+## Acknowledgements
+- [Data Engineering Wiki](https://dataengineering.wiki/Index)
+- [Apache Airflow Docs](https://airflow.apache.org/docs/)
+- [Apache Spark Docs](https://spark.apache.org/docs/latest/)
+- [Apache PySpark Docs](https://spark.apache.org/docs/latest/api/python/index.html)
+- [Amazon S3 Docs](https://docs.aws.amazon.com/s3/)
+- [Useful IBM Data Topics](https://www.ibm.com/topics/data-warehouse)
 
