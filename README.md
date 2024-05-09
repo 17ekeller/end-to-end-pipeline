@@ -41,7 +41,7 @@ Since there are multiple steps depending on one another, I chose to use Apache A
 Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow.providers.amazon.aws.hooks module in Python.
 
 ## Tech Stack
-  - Python
+  -  Python
   -  Amazon S3 - data lake storage
   -  MySQL - data warehousing
   -  Apache Spark - cleaning, transforming and writing data
