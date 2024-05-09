@@ -6,6 +6,8 @@ from extractProcessedData import extractProcessedData
 from datetime import datetime
 import json
 
+'''This script takes the processed data file from S3 and utilizing apache Spark,
+puts the processed data into a dataframe,'''
 
 def dictionaryTransform(dataDict) -> dict:
 
