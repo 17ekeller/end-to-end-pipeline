@@ -1,5 +1,7 @@
 # :partly_sunny: Chicago Weather - Automated End to End Data Pipeline Project :cloud_with_lightning:
 
+![Data pipeline flowchar](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/Data%20Flow%20Visual)
+
 ## :white_check_mark:Introduction
 This project aims to create a fully automated, end to end data pipeline using realtime, on the half-hour weather data from the City of Chicago via [Current Weather API](https://www.weatherapi.com/docs/). 
 
@@ -48,8 +50,6 @@ Airflow is also utilized for an abstraction layer with S3 Hooks from the airflow
   -  Apache Airflow - workflow scheduling, batch processing, orchestration and S3 Abstraction
   -  Microsoft PowerBI - visualization
 
-## Pipeline Architecture Visual
-![Data pipeline flowchar](https://github.com/17ekeller/weather-endtoend-pipeline/blob/main/Data%20Flow%20Visual)
 
 ## DAG Graph Visual
 ![Dag Flow](https://github.com/17ekeller/end-to-end-pipeline/blob/main/Dagflow)
